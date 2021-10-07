@@ -22,14 +22,12 @@ touch .gitignore
 
 
 ### Step 3 - Create conda env
-
 conda create --name mlops python=3.7 
 conda activate mlops
 
 
 
 ### Step 4 - Create a setup file
-
 touch setup.py
 
 paste the following text
@@ -58,23 +56,19 @@ setup(
 
 
 ### Step 5 - Create and install dependencies
-
 touch requirements.txt
 pip install -r requirements.txt
 
 
 ### Step 6 - intitialize dvc
-
 dvc init
 
 
 ### Step 7 - Create the basic directory structure
-
 mkdir -p src/utils config
 
 
 ### Step 8 - Create the basic directory structure
-
 touch config/config.yml
 
 add the following text
@@ -87,12 +81,10 @@ artifacts:
 
 
 ### Step 9 - Create the stage 01 python file and all_utils_file
-
 touch src/stage_01_load_save.py src/utils/all_utils.py
 
 
 ### Step 10 - Create the dvc.yaml file and add stage 01
-
 touch dvc.yaml
 
 add this in the dvc.yaml file
@@ -108,11 +100,9 @@ stages:
 
 
 ### Step 11 - run the dvc command
-
 dvc repro
 
 ### Step 12 - Push the changes to the remote repository
-
 git add .
 git commit -m "stage 01 added"
 git push origin main
