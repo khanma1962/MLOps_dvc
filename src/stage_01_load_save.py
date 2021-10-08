@@ -21,7 +21,7 @@ def get_data(config_path):
 
     create_dir(dirs=[raw_local_dir_path])
     raw_local_file_path = os.path.join(raw_local_dir_path, raw_local_file)
-
+    # print(f'the local file path is {raw_local_file_path}')
     df.to_csv(raw_local_file_path, sep=';', index=False)
 
 
@@ -32,6 +32,7 @@ if __name__ == '__main__':
     parsed_args = args.parse_args()
 
     get_data(config_path=parsed_args.config)
+
 
 
 
